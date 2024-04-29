@@ -294,7 +294,6 @@ export class KrSchemaItem {
     
     // Json schemas
     get jsonSchema() {
-        
         return get_jsonSchema(this, 0);
     }
     
