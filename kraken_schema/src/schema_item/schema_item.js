@@ -168,11 +168,16 @@ export class KrSchemaItem {
         // returns own properties and all properties of elements that are parent to it.
         let properties = [];
         let minProp = this.minimumViableProperties;
-        for (let i=0; i < this.properties.length; i++) {
-            if(minProp.includes(this.properties[i].record_id )){
-                properties.push(this.properties[i]);
+
+        for(let m of minProp){
+
+            for (let i=0; i < this.properties.length; i++) {
+                if(m == this.properties[i].record_id){
+                    properties.push(this.properties[i]);
+                }
             }
         }
+
         return properties;
     }
     
