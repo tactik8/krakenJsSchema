@@ -30,6 +30,12 @@
             "fr-CA": "action"
         }
     },
+    "actionStatus": {
+        "name": {
+            "en-US": "status",
+            "fr-CA": "Statut"
+        }
+    },
     "organization": {
         "propertiesLight": ["name", "address", "telephone", "email", "url"],
         "headings": {

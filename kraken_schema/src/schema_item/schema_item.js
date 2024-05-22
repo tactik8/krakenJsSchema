@@ -21,7 +21,7 @@ export class KrSchemaItem {
     - classes:
         - parentClasses: the classes (things) that are parent to the schema (thing -> person)
         - properties: the properties items that are part of the class
-        - proeprtiesLight: minimum set of properties
+        - propertiesLight: minimum set of properties
         - jsonSchema: returns jsonSchema for given class
         - jsonSchemaLight: returns jsonSchema with only light properties
     - properties:
@@ -104,11 +104,10 @@ export class KrSchemaItem {
 
         let results = [];
         for (let i = 0; i < this._subClasses.length; i++) {
-            results.push(this._subClasses[i].record_id);
-            results = results.concat(this._subClasses[i].childClasses);
+            results.push(this._subClasses[i].record_id)
+            results = results.concat(this._subClasses[i].childClasses)
         }
-        return [...new Set(results)];
-;
+        return [...new Set(results)]
     }
 
     get record_types(){
