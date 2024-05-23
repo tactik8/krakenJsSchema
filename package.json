@@ -14,9 +14,9 @@
       "@babel/plugin-syntax-import-attributes"
     ]
   },
-  "name": "krakenjsschema",
+  "name": "krakenschema",
   "description": "JS library for schema.org",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": "Tactik8",
   "license": "ISC"
 }
