@@ -1,5 +1,5 @@
 
-import { KrakenSchemas as k} from '../kraken_schema.js';
+import { KrakenSchemas as k} from '../index.js';
 
 
 
