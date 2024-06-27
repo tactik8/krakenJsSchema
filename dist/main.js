@@ -269,8 +269,10 @@ class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
     - get_headingText(record):   given a record, returns headingText value
     - get_heading_image(record): returns url for the image 
   
-    */ constructor(name){
+    */ constructor(thing = null){
         this._record = {};
+        this._thing = thing // Thing to get info from
+        ;
         this._properties = []; //inverse of domains includes
         this._subClassOf = []; // Parent classes inheriting from
         this._subClasses = []; // Child classes inheriting from this
@@ -295,6 +297,12 @@ class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
             return record_types[0];
         }
         return this.record["@type"] || null;
+    }
+    get thing() {
+        return this._thing;
+    }
+    set thing(value) {
+        this._thing = value;
     }
     get name() {
         return this.record_id;
@@ -415,29 +423,51 @@ class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
         return (0, $44182d1d65121e92$export$6d1a4004247079c5)(this.record_id, locale, defaultValue);
     }
     // Headings
+    _getThingRecord(record) {
+        if (record && record != null) return record;
+        if (!this._thing || this._thing == null) return null;
+        if (this._thing.bestRecord) return this._thing.bestRecord;
+        else return this._thing;
+    }
+    get headings() {
+        return this.get_headings();
+    }
+    get_headings(inputRecord) {
+        let thingRecord = this._getThingRecord(inputRecord);
+        let record = {
+            "@type": thingRecord?.["@type"],
+            "@id": thingRecord?.["@id"],
+            "heading1": this.get_heading1(thingRecord),
+            "heading2": this.get_heading2(thingRecord),
+            "headingText": this.get_headingText(thingRecord),
+            "headingImage": this.get_headingImage(thingRecord),
+            "headingThumbnail": this.get_headingThumbnail(thingRecord)
+        };
+        return record;
+    }
     get_heading1(record) {
-        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_heading1(record);
+        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_heading1(this._getThingRecord(record));
     }
     get_heading2(record) {
-        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_heading1(record);
+        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_heading2(this._getThingRecord(record));
     }
     get_headingText(record) {
-        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingText(record);
+        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingText(this._getThingRecord(record));
     }
     get_heading_text(record) {
-        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingText(record);
+        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingText(this._getThingRecord(record));
     }
     get_headingImage(record) {
-        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingImage(record);
+        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingImage(this._getThingRecord(record));
     }
     get_heading_image(record) {
-        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingImage(record);
+        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingImage(this._getThingRecord(record));
     }
     get_headingThumbnail(record) {
-        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingThumbnail(record);
+        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingThumbnail(this._getThingRecord(record));
     }
     get_heading_thumbnail(record) {
-        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingThumbnail(record);
+        return (0, $64d05a48ab9166aa$export$487749506ad39f76).get_headingThumbnail(this._getThingRecord(record));
     }
     // types
     get jsonSchemaType() {

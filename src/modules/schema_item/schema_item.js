@@ -43,8 +43,9 @@ export class KrSchemaItem {
   
     */
 
-    constructor(name) {
+    constructor(thing=null) {
         this._record = {};
+        this._thing = thing        // Thing to get info from
         this._properties = []; //inverse of domains includes
         this._subClassOf = []; // Parent classes inheriting from
         this._subClasses = []; // Child classes inheriting from this
@@ -79,6 +80,14 @@ export class KrSchemaItem {
         return this.record["@type"] || null;
     }
 
+    get thing(){
+        return this._thing
+    }
+
+    set thing(value){
+        this._thing = value
+    }
+    
     get name() {
         return this.record_id;
     }
@@ -252,36 +261,72 @@ export class KrSchemaItem {
     }
 
     // Headings
+
+    _getThingRecord(record){
+
+        if(record && record != null) { return record }
+        
+        if(!this._thing || this._thing == null) { return null}
+
+        if(this._thing.bestRecord) { 
+            return this._thing.bestRecord 
+        } else {
+            return this._thing
+        }
+        
+    }
+
+
+    get headings(){
+        return this.get_headings()
+    }
+    
+    get_headings(inputRecord){
+
+        let thingRecord = this._getThingRecord(inputRecord)
+        let record = {
+            "@type": thingRecord?.['@type'],
+            "@id": thingRecord?.['@id'],
+            "heading1": this.get_heading1(thingRecord),
+            "heading2": this.get_heading2(thingRecord),
+            "headingText": this.get_headingText(thingRecord),
+            "headingImage": this.get_headingImage(thingRecord),
+            "headingThumbnail": this.get_headingThumbnail(thingRecord)
+        }
+        return record
+    }
+    
+    
     get_heading1(record) {
-        return schemaHeadings.get_heading1(record);
+        return schemaHeadings.get_heading1(this._getThingRecord(record));
     }
 
     get_heading2(record) {
-        return schemaHeadings.get_heading1(record);
+        return schemaHeadings.get_heading2(this._getThingRecord(record));
     }
 
     get_headingText(record) {
-        return schemaHeadings.get_headingText(record);
+        return schemaHeadings.get_headingText(this._getThingRecord(record));
     }
-    
+
     get_heading_text(record) {
-        return schemaHeadings.get_headingText(record);
+        return schemaHeadings.get_headingText(this._getThingRecord(record));
     }
 
     get_headingImage(record){
-        return schemaHeadings.get_headingImage(record);
+        return schemaHeadings.get_headingImage(this._getThingRecord(record));
     }
     
     get_heading_image(record){
-        return schemaHeadings.get_headingImage(record);
+        return schemaHeadings.get_headingImage(this._getThingRecord(record));
     }
 
     get_headingThumbnail(record){
-        return schemaHeadings.get_headingThumbnail(record);
+        return schemaHeadings.get_headingThumbnail(this._getThingRecord(record));
     }
     
     get_heading_thumbnail(record){
-        return schemaHeadings.get_headingThumbnail(record);
+        return schemaHeadings.get_headingThumbnail(this._getThingRecord(record));
     }
 
 
