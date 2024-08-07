@@ -12,12 +12,20 @@ s.thing = {
         "@type": "Thing",
         "@id": "thing1",
         "name": "thing1",
-        "description": "desc1"
+        "description": "desc1",
+    "image": {
+            "@context": "https://schema.org/",
+            "@type": "ImageObject",
+            "@id": "image1",
+            "name": "image_1",
+            "contentUrl": "https://placehold.co/600x400"
+        }
+    
     }
 
 
 
 
 
-console.log(s.headings)
+console.log(s.get_headingImage())
 

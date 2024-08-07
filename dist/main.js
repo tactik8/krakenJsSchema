@@ -677,6 +677,7 @@ function $f7b499771431e12f$var$ensureArray(value) {
 }
 
 
+
 function $37e17214032cdb08$export$8206feaf78dac055(record_type, record_id = 1) {
     switch(record_type){
         case "Person":
@@ -908,8 +909,9 @@ function $37e17214032cdb08$var$action(record_id) {
 
 
 var $cf838c15c8b009ba$export$fd8394fce9fb2453 = new (0, $f7b499771431e12f$export$4aa5365f5e56a598)();
+var $cf838c15c8b009ba$export$ef9ff330cb2da1bb = (0, $a7aabfd39e443ba4$export$ef9ff330cb2da1bb);
 var $cf838c15c8b009ba$export$8206feaf78dac055 = (0, $37e17214032cdb08$export$8206feaf78dac055);
 
 
-export {$cf838c15c8b009ba$export$fd8394fce9fb2453 as KrakenSchemas, $cf838c15c8b009ba$export$8206feaf78dac055 as KrSamples};
+export {$cf838c15c8b009ba$export$fd8394fce9fb2453 as KrakenSchemas, $cf838c15c8b009ba$export$ef9ff330cb2da1bb as KrSchemaItem, $cf838c15c8b009ba$export$8206feaf78dac055 as KrSamples};
 //# sourceMappingURL=main.js.map
