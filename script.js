@@ -27,5 +27,5 @@ s.thing = {
 
 
 
-console.log(s.get_headingImage())
+console.log(JSON.stringify(s, null, 4))
 

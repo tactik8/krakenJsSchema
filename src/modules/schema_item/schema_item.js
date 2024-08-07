@@ -53,6 +53,32 @@ export class KrSchemaItem {
         this._enumerationItems = []; // Enumeration items that can be used for this
     }
 
+
+    toString(){
+
+        if(this.expectedType != null){ }
+        let content = `${this.name} -  expected types: ${this.expectedTypes || 'na'}  html type: ${this.htmlType || 'na'}`
+        return content
+    }
+
+    toJSON(){
+
+        let record = {
+            "@type": this.record_type,
+            "@id": this.record_id,
+            name: this.name, 
+            properties: this.properties.map(x => x.name),
+            propertiesLight: this.propertiesLight.map(x => x.name),
+            expectedTypes: this.expectedTypes.map(x => x.name),
+            expectedType: this.expectedType?.name || null,
+            enumerationItems: this.enumerationItems.map(x => x.name)
+            
+        }
+        return record
+
+        
+    }
+    
     init() {
         return this.getFromSchemaOrg();
     }
