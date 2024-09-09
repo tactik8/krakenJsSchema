@@ -9,7 +9,6 @@ export function get_jsonSchemaLight(item, depth=0) {
 }
 
 export function get_jsonSchema(item, depth=0) {
-    //console.log('b', item.record_id);
     return jsonSchemaBuilder(item, false, depth);
 }
 
@@ -19,25 +18,18 @@ export function jsonSchemaBuilder(item, isLight, depth=0) {
     // 
 
        
-    //console.log('it', item.record_type);
     if (item.enumerationItems && item.enumerationItems.length > 0) {
-        //console.log('aa');
         return getEnumeration(item, isLight, depth);
     } else if (item.record_id == "URL") {
-        //console.log('bb');
         return getUrl(item, isLight, depth);
     } else if (item.record_type == "rdfs:Class") {
-        //console.log('cc');
         if(depth >= 2) { return getId(item, isLight, depth)} else {
         return getClass(item, isLight, depth +1)};
     } else if (item.record_type == "rdf:Property") {
-        //console.log('dd');
         return getProperty(item, isLight, depth);
     } else if (item.record_type == "schema:DataType") {
-        //console.log('ee');
         return getDatatype(item, isLight, depth);
     } else{
-        console.log('None', item);
     }
 }
 
@@ -79,7 +71,6 @@ function getId(item, isLight, depth) {
 
 function getClass(item, isLight, depth) {
 
-    console.log('isLight', isLight);
     if(isLight==true){
         var properties = item.propertiesLight;
     } else { 

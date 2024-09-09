@@ -75,6 +75,11 @@ export class KrSchemasClass  {
         return Object.keys(this._db).length;
     }
 
+    /**
+     * Get KrSchemaItem for given thing/property
+     * @param1 {String} record_id
+     * @return {KrSchemaItem} The KrSchemaItem representing the thing / property
+     */
     get(record_id){
 
         return this.getItem(record_id);

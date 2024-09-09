@@ -1,51 +1,55 @@
-import  configRecord from '../../ref/configRecord.json' with { type: 'json' };
+import configRecord from "../../ref/configRecord.json" with { type: "json" };
 
-import { schemaHeadings } from './src/schema_headings.js';
+import { schemaHeadings } from "./src/schema_headings.js";
 
-import { get_jsonSchema } from './src/schema_jsonSchema.js';
-import { get_jsonSchemaLight } from './src/schema_jsonSchema.js';
-import { jsonSchemaBuilder } from './src/schema_jsonSchema.js';
+import { get_jsonSchema } from "./src/schema_jsonSchema.js";
+import { get_jsonSchemaLight } from "./src/schema_jsonSchema.js";
+import { jsonSchemaBuilder } from "./src/schema_jsonSchema.js";
 
+jsonSchemaBuilder;
+import { get_htmlType } from "./src/schema_htmlTypes.js";
+import { get_jsonSchemaType } from "./src/schema_jsonTypes.js";
 
+import { get_localizedName } from "./src/schema_localization.js";
 
-jsonSchemaBuilder
-import { get_htmlType } from './src/schema_htmlTypes.js';
-import { get_jsonSchemaType } from './src/schema_jsonTypes.js';
-
-import { get_localizedName } from './src/schema_localization.js';
+/** Contains metadata to qualify a value 
+ *
+ *  Attributes:
+ *  - classes:
+ *     - parentClasses: the classes (things) that are parent to the schema (thing -> person)
+ *       - properties: the properties items that are part of the class
+ *       - propertiesLight: minimum set of properties
+ *       - jsonSchema: returns jsonSchema for given class
+ *       - jsonSchemaLight: returns jsonSchema with only light properties
+ *   - properties:
+ *       - expectedTypes: list of all types expected for the value of the property
+ *       - expectedType: most frequent type for the property
+ *   - types:    
+ *       - htmlType: returns the html type (text, url, email, etc) for forms
+ *       - enumerationItems: returns expected items for value (dropdown list)
+ *  
+ *
+ *   Methods:
+ *   - getProperty(propertyID):   returns a specific property
+ *   - getLocalizedID:            returns localized version of id/propertyID
+ *   - getLocalizedPropertyID:    duplicate
+ *   - get_heading1(record):      given a record, returns heading1 value
+ *   - get_heading2(record):      given a record, returns heading2 value
+ *   - get_headingText(record):   given a record, returns headingText value
+ *   - get_heading_image(record): returns url for the image 
+ *
+ *
+ */
 
 export class KrSchemaItem {
-    /* Contains metadata to qualify a value
-
-    Attributes:
-    - classes:
-        - parentClasses: the classes (things) that are parent to the schema (thing -> person)
-        - properties: the properties items that are part of the class
-        - propertiesLight: minimum set of properties
-        - jsonSchema: returns jsonSchema for given class
-        - jsonSchemaLight: returns jsonSchema with only light properties
-    - properties:
-        - expectedTypes: list of all types expected for the value of the property
-        - expectedType: most frequent type for the property
-    - types:    
-        - htmlType: returns the html type (text, url, email, etc) for forms
-        - enumerationItems: returns expected items for value (dropdown list)
-   
-
-    Methods:
-    - getProperty(propertyID):   returns a specific property
-    - getLocalizedID:            returns localized version of id/propertyID
-    - getLocalizedPropertyID:    duplicate
-    - get_heading1(record):      given a record, returns heading1 value
-    - get_heading2(record):      given a record, returns heading2 value
-    - get_headingText(record):   given a record, returns headingText value
-    - get_heading_image(record): returns url for the image 
-  
-    */
-
-    constructor(thing=null) {
+    
+    /**
+     * constructor description
+     * @thing  {Object} thing record [The record (bestRecord) of the thing]
+     */
+    constructor(thing = null) {
         this._record = {};
-        this._thing = thing        // Thing to get info from
+        this._thing = thing; // Thing to get info from
         this._properties = []; //inverse of domains includes
         this._subClassOf = []; // Parent classes inheriting from
         this._subClasses = []; // Child classes inheriting from this
@@ -53,32 +57,27 @@ export class KrSchemaItem {
         this._enumerationItems = []; // Enumeration items that can be used for this
     }
 
-
-    toString(){
-
-        if(this.expectedType != null){ }
-        let content = `${this.name} -  expected types: ${this.expectedTypes || 'na'}  html type: ${this.htmlType || 'na'}`
-        return content
+    toString() {
+        if (this.expectedType != null) {
+        }
+        let content = `${this.name} -  expected types: ${this.expectedTypes || "na"}  html type: ${this.htmlType || "na"}`;
+        return content;
     }
 
-    toJSON(){
-
+    toJSON() {
         let record = {
             "@type": this.record_type,
             "@id": this.record_id,
-            name: this.name, 
-            properties: this.properties.map(x => x.name),
-            propertiesLight: this.propertiesLight.map(x => x.name),
-            expectedTypes: this.expectedTypes.map(x => x.name),
+            name: this.name,
+            properties: this.properties.map((x) => x.name),
+            propertiesLight: this.propertiesLight.map((x) => x.name),
+            expectedTypes: this.expectedTypes.map((x) => x.name),
             expectedType: this.expectedType?.name || null,
-            enumerationItems: this.enumerationItems.map(x => x.name)
-            
-        }
-        return record
-
-        
+            enumerationItems: this.enumerationItems.map((x) => x.name),
+        };
+        return record;
     }
-    
+
     init() {
         return this.getFromSchemaOrg();
     }
@@ -91,29 +90,34 @@ export class KrSchemaItem {
         id = id.replace("schema:", "");
         return id;
     }
-    get record_type() {
 
+    get propertyID(){
+        return this.record_id
+    }
+
+    
+    get record_type() {
         var record_types = ensureArray(this.record["@type"]);
-        if(record_types.length > 1){
-            for(let i=0; i< record_types.length; i++){
-                if (record_types[i] != 'rdfs:Class'){
-                    return record_types[i]
-                };
-            };
+        if (record_types.length > 1) {
+            for (let i = 0; i < record_types.length; i++) {
+                if (record_types[i] != "rdfs:Class") {
+                    return record_types[i];
+                }
+            }
             return record_types[0];
-        };
+        }
 
         return this.record["@type"] || null;
     }
 
-    get thing(){
-        return this._thing
+    get thing() {
+        return this._thing;
     }
 
-    set thing(value){
-        this._thing = value
+    set thing(value) {
+        this._thing = value;
     }
-    
+
     get name() {
         return this.record_id;
     }
@@ -134,24 +138,29 @@ export class KrSchemaItem {
         return results;
     }
 
-    get childClasses(){
+    get childClasses() {
         // Returns array with all the childs schema classes in the hierarchy
 
         let results = [];
         for (let i = 0; i < this._subClasses.length; i++) {
-            results.push(this._subClasses[i].record_id)
-            results = results.concat(this._subClasses[i].childClasses)
+            results.push(this._subClasses[i].record_id);
+            results = results.concat(this._subClasses[i].childClasses);
         }
-        return [...new Set(results)]
-    }
-
-    get record_types(){
-        // returns childClasses and itself
-        let results = [this.record_id].concat(this.childClasses).concat(this.parentClasses);
         return [...new Set(results)];
     }
-    
 
+    get record_types() {
+        // returns childClasses and itself
+        let results = [this.record_id]
+            .concat(this.childClasses)
+            .concat(this.parentClasses);
+        return [...new Set(results)];
+    }
+
+    /**
+     * Properties of the Thing
+     * @return {[KrSchemaItem]} List of KrSchemaItems representing properties
+     */
     get properties() {
         // returns own properties and all properties of elements that are parent to it.
         let properties = this._properties;
@@ -162,28 +171,27 @@ export class KrSchemaItem {
 
         // Dedupe
         let dedupedProperties = [];
-        let recordIds=[];
+        let recordIds = [];
         for (let i = 0; i < properties.length; i++) {
-            if(!recordIds.includes(properties[i].record_id)){
+            if (!recordIds.includes(properties[i].record_id)) {
                 dedupedProperties.push(properties[i]);
                 recordIds.push(properties[i].record_id);
             }
         }
 
         // Sort
-        function compare( a, b ) {
-          if ( a.record_id < b.record_id ){
-            return -1;
-          }
-          if ( a.record_id > b.record_id ){
-            return 1;
-          }
-          return 0;
+        function compare(a, b) {
+            if (a.record_id < b.record_id) {
+                return -1;
+            }
+            if (a.record_id > b.record_id) {
+                return 1;
+            }
+            return 0;
         }
 
-        dedupedProperties.sort( compare );
+        dedupedProperties.sort(compare);
 
-        
         return dedupedProperties;
     }
 
@@ -197,16 +205,14 @@ export class KrSchemaItem {
         return names;
     }
 
-    
     get propertiesLight() {
         // returns own properties and all properties of elements that are parent to it.
         let properties = [];
         let minProp = this.minimumViableProperties;
 
-        for(let m of minProp){
-
-            for (let i=0; i < this.properties.length; i++) {
-                if(m == this.properties[i].record_id){
+        for (let m of minProp) {
+            for (let i = 0; i < this.properties.length; i++) {
+                if (m == this.properties[i].record_id) {
                     properties.push(this.properties[i]);
                 }
             }
@@ -214,7 +220,7 @@ export class KrSchemaItem {
 
         return properties;
     }
-    
+
     // methods
     getProperty(propertyID) {
         let properties = [...this.properties];
@@ -228,20 +234,18 @@ export class KrSchemaItem {
     }
 
     get expectedType() {
-
         if (this._expectedTypes.length == 0) {
             return null;
         }
         if (this._expectedTypes.length == 1) {
             return this._expectedTypes[0];
         }
-        
+
         for (let i = 0; i < this._expectedTypes.length; i++) {
-            
             if (this._expectedTypes[i].htmlType == "object") {
                 return this._expectedTypes[i];
             }
-        };
+        }
         return this._expectedTypes[0];
     }
 
@@ -277,52 +281,50 @@ export class KrSchemaItem {
         } else {
             properties = ["name", "url"];
         }
-        console.log('properties', properties);
         return properties;
     }
 
     // localization
-    getLocalizedPropertyID(locale, defaultValue){
+    getLocalizedPropertyID(locale, defaultValue) {
         return get_localizedName(this.record_id, locale, defaultValue);
     }
 
     // Headings
 
-    _getThingRecord(record){
+    _getThingRecord(record) {
+        if (record && record != null) {
+            return record;
+        }
 
-        if(record && record != null) { return record }
-        
-        if(!this._thing || this._thing == null) { return null}
+        if (!this._thing || this._thing == null) {
+            return null;
+        }
 
-        if(this._thing.bestRecord) { 
-            return this._thing.bestRecord 
+        if (this._thing.bestRecord) {
+            return this._thing.bestRecord;
         } else {
-            return this._thing
+            return this._thing;
         }
-        
     }
 
-
-    get headings(){
-        return this.get_headings()
+    get headings() {
+        return this.get_headings();
     }
-    
-    get_headings(inputRecord){
 
-        let thingRecord = this._getThingRecord(inputRecord)
+    get_headings(inputRecord) {
+        let thingRecord = this._getThingRecord(inputRecord);
         let record = {
-            "@type": thingRecord?.['@type'],
-            "@id": thingRecord?.['@id'],
-            "heading1": this.get_heading1(thingRecord),
-            "heading2": this.get_heading2(thingRecord),
-            "headingText": this.get_headingText(thingRecord),
-            "headingImage": this.get_headingImage(thingRecord),
-            "headingThumbnail": this.get_headingThumbnail(thingRecord)
-        }
-        return record
+            "@type": thingRecord?.["@type"],
+            "@id": thingRecord?.["@id"],
+            heading1: this.get_heading1(thingRecord),
+            heading2: this.get_heading2(thingRecord),
+            headingText: this.get_headingText(thingRecord),
+            headingImage: this.get_headingImage(thingRecord),
+            headingThumbnail: this.get_headingThumbnail(thingRecord),
+        };
+        return record;
     }
-    
-    
+
     get_heading1(record) {
         return schemaHeadings.get_heading1(this._getThingRecord(record));
     }
@@ -339,26 +341,29 @@ export class KrSchemaItem {
         return schemaHeadings.get_headingText(this._getThingRecord(record));
     }
 
-    get_headingImage(record){
-        return schemaHeadings.get_headingImage(this._getThingRecord(record));
-    }
-    
-    get_heading_image(record){
+    get_headingImage(record) {
         return schemaHeadings.get_headingImage(this._getThingRecord(record));
     }
 
-    get_headingThumbnail(record){
-        return schemaHeadings.get_headingThumbnail(this._getThingRecord(record));
-    }
-    
-    get_heading_thumbnail(record){
-        return schemaHeadings.get_headingThumbnail(this._getThingRecord(record));
+    get_heading_image(record) {
+        return schemaHeadings.get_headingImage(this._getThingRecord(record));
     }
 
+    get_headingThumbnail(record) {
+        return schemaHeadings.get_headingThumbnail(
+            this._getThingRecord(record),
+        );
+    }
+
+    get_heading_thumbnail(record) {
+        return schemaHeadings.get_headingThumbnail(
+            this._getThingRecord(record),
+        );
+    }
 
     // types
 
-    get jsonSchemaType(){
+    get jsonSchemaType() {
         return get_jsonSchemaType(this);
     }
 
@@ -366,33 +371,29 @@ export class KrSchemaItem {
         // Returns the corresponding html type for forms
         return get_htmlType(this);
     }
-    
+
     // Json schemas
     get jsonSchema() {
         return get_jsonSchema(this, 0);
     }
-    
+
     get jsonSchemaLight() {
         return get_jsonSchemaLight(this, 0);
     }
-    
+
     // Json schemas
-    get_jsonSchema(depth=0) {
-        
+    get_jsonSchema(depth = 0) {
         return get_jsonSchema(this, depth);
     }
 
-    get_jsonSchemaLight(depth=0) {
+    get_jsonSchemaLight(depth = 0) {
         return get_jsonSchemaLight(this, depth);
     }
     // Json schemas
-    get_jsonSchema_system(isLight, depth=0) {
-        
+    get_jsonSchema_system(isLight, depth = 0) {
         return jsonSchemaBuilder(this, isLight, depth);
     }
-    
 }
-
 
 function ensureNotArray(value) {
     let new_value = ensureArray(value);
