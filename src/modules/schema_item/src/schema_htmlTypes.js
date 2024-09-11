@@ -47,7 +47,7 @@ export function get_htmlType(item) {
             return "text";
         }
         case "Time": {
-            return "time";
+            return "datetime-local";
         }
         default:
             return "object";

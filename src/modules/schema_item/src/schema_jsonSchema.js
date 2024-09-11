@@ -17,20 +17,24 @@ export function jsonSchemaBuilder(item, isLight, depth=0, locale=null) {
 
     // 
 
+    let record 
        
     if (item.enumerationItems && item.enumerationItems.length > 0) {
-        return getEnumeration(item, isLight, depth, locale);
+        record =  getEnumeration(item, isLight, depth, locale);
     } else if (item.record_id == "URL") {
-        return getUrl(item, isLight, depth, locale);
+            record = getUrl(item, isLight, depth, locale);
     } else if (item.record_type == "rdfs:Class") {
         if(depth >= 2) { return getId(item, isLight, depth, locale)} else {
-        return getClass(item, isLight, depth +1, locale)};
+            record = getClass(item, isLight, depth +1, locale)};
     } else if (item.record_type == "rdf:Property") {
-        return getProperty(item, isLight, depth, locale);
+            record = getProperty(item, isLight, depth, locale);
     } else if (item.record_type == "schema:DataType") {
-        return getDatatype(item, isLight, depth, locale);
+            record = getDatatype(item, isLight, depth, locale);
     } else{
     }
+
+   
+    return record
 }
 
 
@@ -110,6 +114,11 @@ function getProperty(item, isLight, depth, locale) {
             type: "array",
             items: item.expectedType.get_jsonSchema_system(isLight, depth, locale),
         };
+
+    if(isLight == true){
+            jsonRecord.maxItems = 1
+    }
+
         return jsonRecord;
   
 }

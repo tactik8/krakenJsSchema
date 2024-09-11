@@ -2,8 +2,6 @@
     "action": {
         "propertiesLight": [
             "name",
-            "url",
-            "alternateName",
             "actionStatus",
             "startTime",
             "endTime",
