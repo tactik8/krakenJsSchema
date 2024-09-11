@@ -1,12 +1,18 @@
 import configRecord from "../../../ref/configRecord.json" with { type: "json" };
 
+
+for(let k in configRecord){
+    configRecord[k.toLowerCase()] = configRecord[k]
+}
+
+
 export function get_localizedName(record_id, locale, defaultValue = null) {
 
     if(!locale || locale == null){ return defaultValue }
     
     record_id = record_id.replace("schema:", "");
     record_id = record_id.toLowerCase();
-
+    
     if (configRecord[record_id]) {
         // Find exact match
         if (configRecord[record_id]["name"][locale]) {

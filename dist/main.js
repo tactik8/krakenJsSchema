@@ -64,6 +64,7 @@ function $64d05a48ab9166aa$var$getPropertyValueFromDot(key, value, headingName) 
 
 
 
+for(let k in 0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))(0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[k.toLowerCase()] = (0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[k];
 function $44182d1d65121e92$export$6d1a4004247079c5(record_id, locale, defaultValue = null) {
     if (!locale || locale == null) return defaultValue;
     record_id = record_id.replace("schema:", "");
@@ -123,6 +124,7 @@ function $243f921bb2d204c3$var$getEnumeration(item, isLight, depth, locale) {
 }
 function $243f921bb2d204c3$var$getUrl(item, isLight, depth, locale) {
     return {
+        title: (0, $44182d1d65121e92$export$6d1a4004247079c5)(item.record_id, locale, item.record_id),
         type: "string"
     };
 }
@@ -151,6 +153,7 @@ function $243f921bb2d204c3$var$getClass(item, isLight, depth, locale) {
 }
 function $243f921bb2d204c3$var$getProperty(item, isLight, depth, locale) {
     var jsonRecord = {
+        title: (0, $44182d1d65121e92$export$6d1a4004247079c5)(item.record_id, locale, item.record_id),
         type: "array",
         items: item.expectedType.get_jsonSchema_system(isLight, depth, locale)
     };
@@ -158,6 +161,7 @@ function $243f921bb2d204c3$var$getProperty(item, isLight, depth, locale) {
 }
 function $243f921bb2d204c3$var$getDatatype(item, isLight, depth, locale) {
     var jsonRecord = {
+        title: (0, $44182d1d65121e92$export$6d1a4004247079c5)(item.record_id, locale, item.record_id),
         type: item.jsonSchemaType,
         tags: [
             item.htmlType

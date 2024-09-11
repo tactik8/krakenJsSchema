@@ -59,6 +59,7 @@ function getEnumeration(item, isLight, depth, locale) {
 
 function getUrl(item, isLight, depth, locale) {
     return {
+        title: get_localizedName(item.record_id, locale, item.record_id),
         type: 'string',
     };
 }
@@ -105,6 +106,7 @@ function getClass(item, isLight, depth, locale) {
 function getProperty(item, isLight, depth, locale) {
 
         var jsonRecord = {
+            title: get_localizedName(item.record_id, locale, item.record_id),
             type: "array",
             items: item.expectedType.get_jsonSchema_system(isLight, depth, locale),
         };
@@ -114,6 +116,7 @@ function getProperty(item, isLight, depth, locale) {
 
 function getDatatype(item, isLight, depth, locale) {
     var jsonRecord = {
+        title: get_localizedName(item.record_id, locale, item.record_id),
         type: item.jsonSchemaType,
         tags: [item.htmlType],
     };
