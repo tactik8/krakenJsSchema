@@ -1,6 +1,8 @@
 import configRecord from "../../../ref/configRecord.json" with { type: "json" };
 
 export function get_localizedName(record_id, locale, defaultValue = null) {
+
+    if(!locale || locale == null){ return defaultValue }
     
     record_id = record_id.replace("schema:", "");
     record_id = record_id.toLowerCase();

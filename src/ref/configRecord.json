@@ -267,5 +267,29 @@
             "en-US": "street",
             "fr-CA": "rue"
         }
+    },
+    "failedactionstatus": {
+        "name": {
+            "en-US": "Failed",
+            "fr-CA": "Échec"
+        }
+    },
+    "activeactionstatus": {
+        "name": {
+            "en-US": "In progress",
+            "fr-CA": "En cours"
+        }
+    },
+    "potentialactionstatus": {
+        "name": {
+            "en-US": "Not started",
+            "fr-CA": "Non démarrée"
+        }
+    },
+    "completedactionstatus": {
+        "name": {
+            "en-US": "Completed",
+            "fr-CA": "Complété"
+        }
     }
 }

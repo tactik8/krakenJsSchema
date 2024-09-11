@@ -382,16 +382,16 @@ export class KrSchemaItem {
     }
 
     // Json schemas
-    get_jsonSchema(depth = 0) {
-        return get_jsonSchema(this, depth);
+    get_jsonSchema(locale=null, depth = 0) {
+        return get_jsonSchema(this, depth, locale);
     }
 
-    get_jsonSchemaLight(depth = 0) {
-        return get_jsonSchemaLight(this, depth);
+    get_jsonSchemaLight(locale=null, depth = 0) {
+        return get_jsonSchemaLight(this, depth, locale);
     }
     // Json schemas
-    get_jsonSchema_system(isLight, depth = 0) {
-        return jsonSchemaBuilder(this, isLight, depth);
+    get_jsonSchema_system(isLight, depth = 0, locale=null) {
+        return jsonSchemaBuilder(this, isLight, depth, locale);
     }
 }
 

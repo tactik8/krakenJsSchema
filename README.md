@@ -9,6 +9,7 @@ JS library for schema.org
 ```
 node --experimental-vm-modules node_modules/.bin/jest
 
+npx parcel build
 npm adduser
 npm publish
 

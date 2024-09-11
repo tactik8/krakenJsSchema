@@ -3,7 +3,7 @@ function $parcel$interopDefault(a) {
   return a && a.__esModule ? a.default : a;
 }
 var $fc80c9a5cd05ad7a$exports = {};
-$fc80c9a5cd05ad7a$exports = JSON.parse('{"action":{"propertiesLight":["name","url","alternateName","actionStatus","startTime","endTime","object","result","error"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["url"],"separator":", "},"headingText":{"properties":["description"],"separator":", "}},"name":{"en-US":"action","fr-CA":"action"}},"actionStatus":{"name":{"en-US":"status","fr-CA":"Statut"}},"organization":{"propertiesLight":["name","address","telephone","email","url"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["url"],"separator":", "},"headingText":{"properties":["description"],"separator":", "}},"name":{"en-US":"organization","fr-CA":"entreprise"}},"person":{"propertiesLight":["givenName","familyName","jobTitle","worksFor","address","email","telephone"],"headings":{"heading1":{"properties":["givenName","familyName"],"separator":" "},"heading2":{"properties":["email"],"separator":", "},"headingText":{"properties":["description"],"separator":", "}},"name":{"en-US":"contact","fr-CA":"contact"}},"postaladdress":{"propertiesLight":["streetAddress","addressLocality","addressRegion","addressCountry","postalCode"],"headings":{"heading1":{"properties":["streetAddress","addressLocality","addressRegion"],"separator":", "},"heading2":{"properties":["addressCountry","postalCode"],"separator":", "},"headingText":{"properties":[],"separator":", "}},"name":{"en-US":"address","fr-CA":"adresse"}},"listitem":{"propertiesLight":["name","url","item","position"],"headings":{"heading1":{"properties":["item"],"separator":", "},"heading2":{"properties":["item"],"separator":", "},"headingText":{"properties":["item"],"separator":", "},"headingImage":{"properties":["item"],"separator":", "}},"name":{"en-US":"item","fr-CA":"item"}},"itemlist":{"propertiesLight":["name","url"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["url"],"separator":", "},"headingText":{"properties":["description"],"separator":", "},"headingImage":{"properties":["image"],"separator":", "}},"name":{"en-US":"list","fr-CA":"liste"}},"imageobject":{"propertiesLight":["name","contentUrl"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["contentUrl"],"separator":", "},"headingText":{"properties":["description"],"separator":", "},"headingImage":{"properties":["contentUrl"],"separator":", "},"headingThumbnail":{"properties":["thumbnail"],"separator":", "}},"name":{"en-US":"image","fr-CA":"image"}},"thing":{"propertiesLight":["name","url"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["url"],"separator":", "},"headingText":{"properties":["description"],"separator":", "},"headingImage":{"properties":["image"],"separator":", "},"headingThumbnail":{"properties":["image"],"separator":", "}},"name":{"en-US":"thing","fr-CA":"chose"}},"givenname":{"name":{"en-US":"first name","fr-CA":"pr\xe9nom"}},"familyname":{"name":{"en-US":"last name","fr-CA":"nom"}},"addresscountry":{"name":{"en-US":"country","fr-CA":"pays"}},"addresslocality":{"name":{"en-US":"city","fr-CA":"ville"}},"addressregion":{"name":{"en-US":"state","en-CA":"province","fr-CA":"province"}},"postalcode":{"name":{"en-US":"zipcode","fr-CA":"postalcode"}},"streetaddress":{"name":{"en-US":"street","fr-CA":"rue"}}}');
+$fc80c9a5cd05ad7a$exports = JSON.parse('{"action":{"propertiesLight":["name","url","alternateName","actionStatus","startTime","endTime","object","result","error"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["url"],"separator":", "},"headingText":{"properties":["description"],"separator":", "}},"name":{"en-US":"action","fr-CA":"action"}},"actionStatus":{"name":{"en-US":"status","fr-CA":"Statut"}},"organization":{"propertiesLight":["name","address","telephone","email","url"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["url"],"separator":", "},"headingText":{"properties":["description"],"separator":", "}},"name":{"en-US":"organization","fr-CA":"entreprise"}},"person":{"propertiesLight":["givenName","familyName","jobTitle","worksFor","address","email","telephone"],"headings":{"heading1":{"properties":["givenName","familyName"],"separator":" "},"heading2":{"properties":["email"],"separator":", "},"headingText":{"properties":["description"],"separator":", "}},"name":{"en-US":"contact","fr-CA":"contact"}},"postaladdress":{"propertiesLight":["streetAddress","addressLocality","addressRegion","addressCountry","postalCode"],"headings":{"heading1":{"properties":["streetAddress","addressLocality","addressRegion"],"separator":", "},"heading2":{"properties":["addressCountry","postalCode"],"separator":", "},"headingText":{"properties":[],"separator":", "}},"name":{"en-US":"address","fr-CA":"adresse"}},"listitem":{"propertiesLight":["name","url","item","position"],"headings":{"heading1":{"properties":["item"],"separator":", "},"heading2":{"properties":["item"],"separator":", "},"headingText":{"properties":["item"],"separator":", "},"headingImage":{"properties":["item"],"separator":", "}},"name":{"en-US":"item","fr-CA":"item"}},"itemlist":{"propertiesLight":["name","url"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["url"],"separator":", "},"headingText":{"properties":["description"],"separator":", "},"headingImage":{"properties":["image"],"separator":", "}},"name":{"en-US":"list","fr-CA":"liste"}},"imageobject":{"propertiesLight":["name","contentUrl"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["contentUrl"],"separator":", "},"headingText":{"properties":["description"],"separator":", "},"headingImage":{"properties":["contentUrl"],"separator":", "},"headingThumbnail":{"properties":["thumbnail"],"separator":", "}},"name":{"en-US":"image","fr-CA":"image"}},"thing":{"propertiesLight":["name","url"],"headings":{"heading1":{"properties":["name"],"separator":", "},"heading2":{"properties":["url"],"separator":", "},"headingText":{"properties":["description"],"separator":", "},"headingImage":{"properties":["image"],"separator":", "},"headingThumbnail":{"properties":["image"],"separator":", "}},"name":{"en-US":"thing","fr-CA":"chose"}},"givenname":{"name":{"en-US":"first name","fr-CA":"pr\xe9nom"}},"familyname":{"name":{"en-US":"last name","fr-CA":"nom"}},"addresscountry":{"name":{"en-US":"country","fr-CA":"pays"}},"addresslocality":{"name":{"en-US":"city","fr-CA":"ville"}},"addressregion":{"name":{"en-US":"state","en-CA":"province","fr-CA":"province"}},"postalcode":{"name":{"en-US":"zipcode","fr-CA":"postalcode"}},"streetaddress":{"name":{"en-US":"street","fr-CA":"rue"}},"failedactionstatus":{"name":{"en-US":"Failed","fr-CA":"\xc9chec"}},"activeactionstatus":{"name":{"en-US":"In progress","fr-CA":"En cours"}},"potentialactionstatus":{"name":{"en-US":"Not started","fr-CA":"Non d\xe9marr\xe9e"}},"completedactionstatus":{"name":{"en-US":"Completed","fr-CA":"Compl\xe9t\xe9"}}}');
 
 
 
@@ -63,77 +63,100 @@ function $64d05a48ab9166aa$var$getPropertyValueFromDot(key, value, headingName) 
 }
 
 
-function $243f921bb2d204c3$export$fcca1bd111898072(item, depth = 0) {
-    return $243f921bb2d204c3$export$ac77e4a22fc845d5(item, true, depth);
+
+function $44182d1d65121e92$export$6d1a4004247079c5(record_id, locale, defaultValue = null) {
+    if (!locale || locale == null) return defaultValue;
+    record_id = record_id.replace("schema:", "");
+    record_id = record_id.toLowerCase();
+    if ((0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]) {
+        // Find exact match
+        if ((0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]["name"][locale]) return (0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]["name"][locale];
+        // Find closest match
+        var keys = Object.keys((0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]["name"]);
+        var localeLang = locale.slice(0, 2).toLowerCase();
+        for(let i = 0; i < keys.length; i++){
+            var lang = keys[i].slice(0, 2).toLowerCase();
+            var localName = (0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]["name"][keys[i]];
+            if (lang == localeLang && localName) return localName;
+        }
+    }
+    if (defaultValue) return defaultValue;
+    return null;
 }
-function $243f921bb2d204c3$export$56902f8707bbdae8(item, depth = 0) {
-    //console.log('b', item.record_id);
-    return $243f921bb2d204c3$export$ac77e4a22fc845d5(item, false, depth);
+
+
+function $243f921bb2d204c3$export$fcca1bd111898072(item, depth = 0, locale = null) {
+    return $243f921bb2d204c3$export$ac77e4a22fc845d5(item, true, depth, locale);
 }
-function $243f921bb2d204c3$export$ac77e4a22fc845d5(item, isLight, depth = 0) {
+function $243f921bb2d204c3$export$56902f8707bbdae8(item, depth = 0, locale = null) {
+    return $243f921bb2d204c3$export$ac77e4a22fc845d5(item, false, depth, locale);
+}
+function $243f921bb2d204c3$export$ac77e4a22fc845d5(item, isLight, depth = 0, locale = null) {
     // 
-    //console.log('it', item.record_type);
-    if (item.enumerationItems && item.enumerationItems.length > 0) //console.log('aa');
-    return $243f921bb2d204c3$var$getEnumeration(item, isLight, depth);
-    else if (item.record_id == "URL") //console.log('bb');
-    return $243f921bb2d204c3$var$getUrl(item, isLight, depth);
+    if (item.enumerationItems && item.enumerationItems.length > 0) return $243f921bb2d204c3$var$getEnumeration(item, isLight, depth, locale);
+    else if (item.record_id == "URL") return $243f921bb2d204c3$var$getUrl(item, isLight, depth, locale);
     else if (item.record_type == "rdfs:Class") {
-        //console.log('cc');
-        if (depth >= 2) return $243f921bb2d204c3$var$getId(item, isLight, depth);
-        else return $243f921bb2d204c3$var$getClass(item, isLight, depth + 1);
-    } else if (item.record_type == "rdf:Property") //console.log('dd');
-    return $243f921bb2d204c3$var$getProperty(item, isLight, depth);
-    else if (item.record_type == "schema:DataType") //console.log('ee');
-    return $243f921bb2d204c3$var$getDatatype(item, isLight, depth);
-    else console.log("None", item);
+        if (depth >= 2) return $243f921bb2d204c3$var$getId(item, isLight, depth, locale);
+        else return $243f921bb2d204c3$var$getClass(item, isLight, depth + 1, locale);
+    } else if (item.record_type == "rdf:Property") return $243f921bb2d204c3$var$getProperty(item, isLight, depth, locale);
+    else if (item.record_type == "schema:DataType") return $243f921bb2d204c3$var$getDatatype(item, isLight, depth, locale);
 }
-function $243f921bb2d204c3$var$getEnumeration(item, isLight, depth) {
+function $243f921bb2d204c3$var$getEnumeration(item, isLight, depth, locale) {
+    console.log("l", locale);
     // Get enumeration
     var choices = [];
-    for(let i = 0; i < item.enumerationItems.length; i++)choices.push(item.enumerationItems[i].record_id);
+    var enumValue = [];
+    for(let i = 0; i < item.enumerationItems.length; i++){
+        let name = item.enumerationItems[i].record_id;
+        choices.push(item.enumerationItems[i].record_id);
+        enumValue.push({
+            "title": (0, $44182d1d65121e92$export$6d1a4004247079c5)(name, locale, name),
+            "const": name
+        });
+    }
     var jsonRecord = {
         type: "string",
-        choices: choices
+        choices: choices,
+        enum: enumValue
     };
     return jsonRecord;
 }
-function $243f921bb2d204c3$var$getUrl(item, isLight, depth) {
+function $243f921bb2d204c3$var$getUrl(item, isLight, depth, locale) {
     return {
         type: "string"
     };
 }
-function $243f921bb2d204c3$var$getId(item, isLight, depth) {
+function $243f921bb2d204c3$var$getId(item, isLight, depth, locale) {
     return {
-        title: item.record_id,
+        title: (0, $44182d1d65121e92$export$6d1a4004247079c5)(item.record_id, locale, item.record_id),
         type: "object",
         properties: {
             "@id": "string"
         }
     };
 }
-function $243f921bb2d204c3$var$getClass(item, isLight, depth) {
-    console.log("isLight", isLight);
+function $243f921bb2d204c3$var$getClass(item, isLight, depth, locale) {
     if (isLight == true) var properties = item.propertiesLight;
     else var properties = item.properties;
     var jsonRecord = {
-        title: item.record_id,
+        title: (0, $44182d1d65121e92$export$6d1a4004247079c5)(item.record_id, locale, item.record_id),
         type: "object",
         properties: {}
     };
     for(let i = 0; i < properties.length; i++){
         var p = properties[i];
-        if (p) jsonRecord.properties[p.record_id] = p.get_jsonSchema_system(isLight, depth);
+        if (p) jsonRecord.properties[p.record_id] = p.get_jsonSchema_system(isLight, depth, locale);
     }
     return jsonRecord;
 }
-function $243f921bb2d204c3$var$getProperty(item, isLight, depth) {
+function $243f921bb2d204c3$var$getProperty(item, isLight, depth, locale) {
     var jsonRecord = {
         type: "array",
-        items: item.expectedType.get_jsonSchema_system(isLight, depth)
+        items: item.expectedType.get_jsonSchema_system(isLight, depth, locale)
     };
     return jsonRecord;
 }
-function $243f921bb2d204c3$var$getDatatype(item, isLight, depth) {
+function $243f921bb2d204c3$var$getDatatype(item, isLight, depth, locale) {
     var jsonRecord = {
         type: item.jsonSchemaType,
         tags: [
@@ -217,58 +240,14 @@ function $51fb36f1b1645e0b$export$9dfd7dd0322cc232(item) {
 
 
 
-function $44182d1d65121e92$export$6d1a4004247079c5(record_id, locale, defaultValue = null) {
-    record_id = record_id.replace("schema:", "");
-    record_id = record_id.toLowerCase();
-    if ((0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]) {
-        // Find exact match
-        if ((0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]["name"][locale]) return (0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]["name"][locale];
-        // Find closest match
-        var keys = Object.keys((0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]["name"]);
-        var localeLang = locale.slice(0, 2).toLowerCase();
-        for(let i = 0; i < keys.length; i++){
-            var lang = keys[i].slice(0, 2).toLowerCase();
-            var localName = (0, (/*@__PURE__*/$parcel$interopDefault($fc80c9a5cd05ad7a$exports)))[record_id]["name"][keys[i]];
-            if (lang == localeLang && localName) return localName;
-        }
-    }
-    if (defaultValue) return defaultValue;
-    return null;
-}
-
-
 0, $243f921bb2d204c3$export$ac77e4a22fc845d5;
 class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
-    /* Contains metadata to qualify a value
-
-    Attributes:
-    - classes:
-        - parentClasses: the classes (things) that are parent to the schema (thing -> person)
-        - properties: the properties items that are part of the class
-        - propertiesLight: minimum set of properties
-        - jsonSchema: returns jsonSchema for given class
-        - jsonSchemaLight: returns jsonSchema with only light properties
-    - properties:
-        - expectedTypes: list of all types expected for the value of the property
-        - expectedType: most frequent type for the property
-    - types:    
-        - htmlType: returns the html type (text, url, email, etc) for forms
-        - enumerationItems: returns expected items for value (dropdown list)
-   
-
-    Methods:
-    - getProperty(propertyID):   returns a specific property
-    - getLocalizedID:            returns localized version of id/propertyID
-    - getLocalizedPropertyID:    duplicate
-    - get_heading1(record):      given a record, returns heading1 value
-    - get_heading2(record):      given a record, returns heading2 value
-    - get_headingText(record):   given a record, returns headingText value
-    - get_heading_image(record): returns url for the image 
-  
-    */ constructor(thing = null){
+    /**
+     * constructor description
+     * @thing  {Object} thing record [The record (bestRecord) of the thing]
+     */ constructor(thing = null){
         this._record = {};
-        this._thing = thing // Thing to get info from
-        ;
+        this._thing = thing; // Thing to get info from
         this._properties = []; //inverse of domains includes
         this._subClassOf = []; // Parent classes inheriting from
         this._subClasses = []; // Child classes inheriting from this
@@ -301,6 +280,9 @@ class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
         if (id == null) return null;
         id = id.replace("schema:", "");
         return id;
+    }
+    get propertyID() {
+        return this.record_id;
     }
     get record_type() {
         var record_types = $a7aabfd39e443ba4$var$ensureArray(this.record["@type"]);
@@ -356,7 +338,10 @@ class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
             ...new Set(results)
         ];
     }
-    get properties() {
+    /**
+     * Properties of the Thing
+     * @return {[KrSchemaItem]} List of KrSchemaItems representing properties
+     */ get properties() {
         // returns own properties and all properties of elements that are parent to it.
         let properties = this._properties;
         for(let i = 0; i < this._subClassOf.length; i++)properties = properties.concat(this._subClassOf[i].properties);
@@ -429,7 +414,6 @@ class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
             "name",
             "url"
         ];
-        console.log("properties", properties);
         return properties;
     }
     // localization
@@ -451,11 +435,11 @@ class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
         let record = {
             "@type": thingRecord?.["@type"],
             "@id": thingRecord?.["@id"],
-            "heading1": this.get_heading1(thingRecord),
-            "heading2": this.get_heading2(thingRecord),
-            "headingText": this.get_headingText(thingRecord),
-            "headingImage": this.get_headingImage(thingRecord),
-            "headingThumbnail": this.get_headingThumbnail(thingRecord)
+            heading1: this.get_heading1(thingRecord),
+            heading2: this.get_heading2(thingRecord),
+            headingText: this.get_headingText(thingRecord),
+            headingImage: this.get_headingImage(thingRecord),
+            headingThumbnail: this.get_headingThumbnail(thingRecord)
         };
         return record;
     }
@@ -499,15 +483,15 @@ class $a7aabfd39e443ba4$export$ef9ff330cb2da1bb {
         return (0, $243f921bb2d204c3$export$fcca1bd111898072)(this, 0);
     }
     // Json schemas
-    get_jsonSchema(depth = 0) {
-        return (0, $243f921bb2d204c3$export$56902f8707bbdae8)(this, depth);
+    get_jsonSchema(locale = null, depth = 0) {
+        return (0, $243f921bb2d204c3$export$56902f8707bbdae8)(this, depth, locale);
     }
-    get_jsonSchemaLight(depth = 0) {
-        return (0, $243f921bb2d204c3$export$fcca1bd111898072)(this, depth);
+    get_jsonSchemaLight(locale = null, depth = 0) {
+        return (0, $243f921bb2d204c3$export$fcca1bd111898072)(this, depth, locale);
     }
     // Json schemas
-    get_jsonSchema_system(isLight, depth = 0) {
-        return (0, $243f921bb2d204c3$export$ac77e4a22fc845d5)(this, isLight, depth);
+    get_jsonSchema_system(isLight, depth = 0, locale = null) {
+        return (0, $243f921bb2d204c3$export$ac77e4a22fc845d5)(this, isLight, depth, locale);
     }
 }
 function $a7aabfd39e443ba4$var$ensureNotArray(value) {
@@ -575,7 +559,11 @@ class $f7b499771431e12f$export$4aa5365f5e56a598 {
     get length() {
         return Object.keys(this._db).length;
     }
-    get(record_id) {
+    /**
+     * Get KrSchemaItem for given thing/property
+     * @param1 {String} record_id
+     * @return {KrSchemaItem} The KrSchemaItem representing the thing / property
+     */ get(record_id) {
         return this.getItem(record_id);
     }
     getItem(record_id) {

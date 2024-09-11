@@ -16,7 +16,7 @@
   },
   "name": "krakenschema",
   "description": "JS library for schema.org",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "author": "Tactik8",
   "license": "ISC"
 }
